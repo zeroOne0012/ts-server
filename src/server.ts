@@ -1,6 +1,5 @@
 import app from "./app"; // API app
-import config from '../config/config.json';
-const port:number = config.port;
+import config from './config/config';
 
 import http from "http";
 import { Server } from "socket.io";
@@ -15,6 +14,7 @@ const io = new Server(server, {
 
 registerNamespaces(io);
 
-server.listen(port, '0.0.0.0', ()=>{
+const port:number = config.port;
+server.listen(port, "0.0.0.0", ()=>{
     console.log(`listening ${port}`);
 });

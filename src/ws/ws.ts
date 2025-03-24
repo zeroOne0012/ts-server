@@ -1,6 +1,6 @@
 import { Server } from "socket.io";
-import someNamespace from "./namespace/some-snippets.namespace";
+import chatNamespace from "./namespace/chat.namespace";
 
 export default function registerNamespaces(io: Server){
-    someNamespace(io);
+    chatNamespace(io);
 }

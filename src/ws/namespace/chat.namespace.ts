@@ -21,11 +21,11 @@ export default function someNamespace(io: Server){
 
     const messageEmitter = (msg: string): any =>{
         let parsedMsg:socketMsg;
-        try{
+        try{ // json 메시지만 수신
             parsedMsg = JSON.parse(msg)
         } catch (e){
             return console.error(e);
         }
-        chat.emit("message", {parsed: parsedMsg});
+        chat.emit("message", JSON.stringify(parsedMsg));
     };
 }

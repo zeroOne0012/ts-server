@@ -3,7 +3,7 @@ import config from './config/config';
 
 import http from "http";
 import { Server } from "socket.io";
-import registerNamespaces from "./ws/index";
+import registerNamespaces from "./ws/ws";
 
 const server = http.createServer(app);
 const io = new Server(server, {

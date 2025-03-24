@@ -1,6 +1,6 @@
 import express, {Express} from "express";
 import cors from "cors";
-import router from "./api/index";
+import router from "./api/api";
 import logger from "./middleware/logger";
 import config from "./config/config";
 import exceptionHandler from "./middleware/exception-handler";

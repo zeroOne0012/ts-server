@@ -1,6 +1,6 @@
 export default class HttpError extends Error{
-    public statusCode: number;
-    public type: string;
+    public statusCode: number = 500;
+    public type: string = "Internal Server Error";
 
     constructor(statusCode:number, type:string, message:string) {
         super(message);
